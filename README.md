@@ -36,3 +36,14 @@ O primeiro parâmetro é o **telefone** que você quer mandar mensagem, você s�
 O segundo parâmetro é o **navegador** que você deseja abrir o WhatsApp para poder iniciar a conversa.
 
 Se os dados estiverem corretos, a janela do navegador desejado com a tela para iniciar a conversa com o número irá aparecer.
+
+Exemplo do comando:
+
+```
+ferkarchiloff@ferkarchiloff-desktop:~$ owac
+Coloque o número de telefone(somente números): 5511222233333
+Que navegador você gostaria de usar?
+1. Chrome
+2. Firefox
+Coloque o número do navegador de sua escolha: 1
+```
