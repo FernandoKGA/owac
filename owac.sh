@@ -10,11 +10,25 @@ echo "1. Chrome"
 echo "2. Firefox"
 read -p "Coloque o número do navegador de sua escolha: " browser
 
+# Prompt the user to choose app or web
+echo "Você quer usar o aplicativo ou o web?"
+echo "1. Aplicativo"
+echo "2. Web"
+read -p "Coloque o modo de usar de sua escolha: " method
+
+if [ "$method" == "1" ]; then
+  domain="https://api.whatsapp.com/send?phone=$phone"
+elif [ "$method" == "2" ]; then
+  domain="https://web.whatsapp.com/send?phone=$phone"
+else
+  echo "Escolha inválida."
+fi
+
 # Open the URL in the chosen browser
 if [ "$browser" == "1" ]; then
-  google-chrome "https://api.whatsapp.com/send?phone=$phone"
+  google-chrome $domain
 elif [ "$browser" == "2" ]; then
-  firefox "https://api.whatsapp.com/send?phone=$phone"
+  firefox $domain
 else
   echo "Escolha inválida."
 fi
